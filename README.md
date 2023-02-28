@@ -1,3 +1,26 @@
+This is the clone of the FlatCAM Beta repository, originally hosted in the bitbucket. It contains some fixes and the 
+Dockerfile and supplementary to easily run under Linux, as figuring out the working versions of the dependencies was kind of nightmare.
+
+Trivial fixes:
+- Crash on deleting the only tool
+- Crash on exit, the Save-As dialogue 
+
+Running:
+Added Dockerfile, proper requirements with frozen set of the versions and the start script. Credits to 
+Éttore Leandro Tognoli (ettoreleandrotognoli) on bitbucket, who figured actual requirements and posted pip-frozen.
+
+Build with:
+ docker build -t flatcam .
+
+Run with:
+ run_flatcam_docker.sh
+
+Note, the script adds a directory $HOME/SCHEMA of the users as docker volume. Modify according your needs.
+
+Below is the original README
+
+====================================================================
+
 FlatCAM BETA (c) 2019 - by Marius Stanciu
 Based on FlatCAM: 
 2D Computer-Aided PCB Manufacturing by (c) 2014-2016 Juan Pablo Caram
